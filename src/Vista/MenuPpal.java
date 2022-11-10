@@ -29,8 +29,12 @@ public class MenuPpal extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jmi_agregarCarrera = new javax.swing.JMenuItem();
         jmi_agregarAlumnos = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jmi_agregarCarrera = new javax.swing.JMenuItem();
+        jmi_elmimarCarrera = new javax.swing.JMenuItem();
+        jmi_actualizarCarrera = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jmi_salir = new javax.swing.JMenuItem();
 
@@ -38,16 +42,44 @@ public class MenuPpal extends javax.swing.JFrame {
 
         jMenu1.setText("Insertar");
 
+        jmi_agregarAlumnos.setText("Agregar Alumnos");
+        jMenu1.add(jmi_agregarAlumnos);
+
+        jMenu3.setText("Carreras");
+
         jmi_agregarCarrera.setText("Agregar Carrera");
         jmi_agregarCarrera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmi_agregarCarreraActionPerformed(evt);
             }
         });
-        jMenu1.add(jmi_agregarCarrera);
+        jMenu3.add(jmi_agregarCarrera);
 
-        jmi_agregarAlumnos.setText("Agregar Alumnos");
-        jMenu1.add(jmi_agregarAlumnos);
+        jmi_elmimarCarrera.setText("Eliminar Carrera");
+        jmi_elmimarCarrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_elmimarCarreraActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmi_elmimarCarrera);
+
+        jmi_actualizarCarrera.setText("Actualizar Carrera");
+        jmi_actualizarCarrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_actualizarCarreraActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmi_actualizarCarrera);
+
+        jMenuItem4.setText("Listar Carrera");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem4);
+
+        jMenu1.add(jMenu3);
 
         jMenuBar1.add(jMenu1);
 
@@ -73,7 +105,7 @@ public class MenuPpal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGap(0, 279, Short.MAX_VALUE)
         );
 
         pack();
@@ -87,6 +119,24 @@ public class MenuPpal extends javax.swing.JFrame {
         Form_Carrera fc = new Form_Carrera();
         fc.setVisible(true);
     }//GEN-LAST:event_jmi_agregarCarreraActionPerformed
+
+    private void jmi_elmimarCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_elmimarCarreraActionPerformed
+       
+        Form_eliminarCarrera fec = new Form_eliminarCarrera();
+        fec.setVisible(true);
+        
+        
+    }//GEN-LAST:event_jmi_elmimarCarreraActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        Form_listarCarrera flc = new Form_listarCarrera();
+        flc.setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jmi_actualizarCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_actualizarCarreraActionPerformed
+        Form_actualizarCarrera fac = new Form_actualizarCarrera();
+        fac.setVisible(true);
+    }//GEN-LAST:event_jmi_actualizarCarreraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,9 +176,13 @@ public class MenuPpal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jmi_actualizarCarrera;
     private javax.swing.JMenuItem jmi_agregarAlumnos;
     private javax.swing.JMenuItem jmi_agregarCarrera;
+    private javax.swing.JMenuItem jmi_elmimarCarrera;
     private javax.swing.JMenuItem jmi_salir;
     // End of variables declaration//GEN-END:variables
 }

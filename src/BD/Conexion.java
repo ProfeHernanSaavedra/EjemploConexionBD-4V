@@ -18,7 +18,7 @@ public class Conexion {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/duoc2","root","");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/duoc","root","");
             System.out.println("Conexion exitosa!!");
             
             
